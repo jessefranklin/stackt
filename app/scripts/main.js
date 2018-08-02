@@ -16,5 +16,15 @@ $(document).ready(function(){
 
   });
   
+  var doc = document.documentElement;
+  $('.brand-logo-black').each(function(i, obj) {
+    var el = $(this);
+    var topContainer = $(this).closest('section').offsetTop;
+    $(window).on('scroll', function() {
+      var top = (window.pageYOffset || doc.scrollTop) - $('.stackt-hero').outerHeight();
+      el.css({top: top});
+    });
+  });
   
 });
+

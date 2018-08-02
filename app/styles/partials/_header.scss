@@ -17,5 +17,25 @@
   }
 }
 
+.brand-logo-black {
+  display: block;
+  width: 100px;
+  position: absolute;
+  z-index: 4;
+  left: $gutter;
+  margin-top: 40px;
+  svg {
+    width: 100%;
+  }
+}
+
+#mask-logo-blk {
+  position: relative;
+  z-index: 4;
+}
+
 .stackt-logo {
-  fill:#FFFFFF;}
+  fill:#ccc;}
+
+.stackt-logo-black {
+  fill:#000; }

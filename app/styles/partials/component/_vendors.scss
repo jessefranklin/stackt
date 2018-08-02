@@ -5,6 +5,7 @@
     font-size: 40px;
     line-height: 1.13;
     margin-bottom: 50px;
+    
     span {
         display: inline-block;
     }
@@ -16,6 +17,8 @@
     }
 }
 .stackt-vendors {
+    display: block;
+    overflow: hidden;
     a {
         display: inline-block;
     }
