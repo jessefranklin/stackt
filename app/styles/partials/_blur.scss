@@ -1,0 +1,46 @@
+
+.discover-blur {
+    position: fixed;
+	display: block;
+	z-index: 5;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	background: rgba(0,0,0,.7);
+	opacity: 0;
+	transition: opacity 1s ease-in-out;
+	pointer-events: none;
+}
+
+.blur {
+	filter: progid:DXImageTransform.Microsoft.Blur(PixelRadius='4');
+	-webkit-filter: url(#blur-filter);
+	filter: url(#blur-filter);
+	-webkit-filter: blur(4px);
+	filter: blur(4px);
+	opacity: 1;
+}
+
+.blur-active {
+	.hero-image-container,
+	.hero-text-container,
+	.blur {
+	    filter: progid:DXImageTransform.Microsoft.Blur(PixelRadius='4');
+	    -webkit-filter: url(#blur-filter);
+	    filter: url(#blur-filter);
+	    -webkit-filter: blur(4px);
+		filter: blur(4px);
+		transition: opacity .4s ease-in-out;
+		opacity: 1;
+	    .hero-image-container {
+	    	filter: progid:DXImageTransform.Microsoft.Blur(PixelRadius='4');
+		    -webkit-filter: url(#blur-filter);
+		    filter: url(#blur-filter);
+		    -webkit-filter: blur(4px);
+			filter: blur(4px);
+			transition: opacity .4s ease-in-out;
+			opacity: 1;
+		}
+	}
+}

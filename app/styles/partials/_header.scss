@@ -1,0 +1,21 @@
+.header-component{
+  font-family: $sans;
+  height: 116px;
+  margin: 0 auto;
+  //max-width: $contentmaxwidth;
+}
+
+.brand-logo {
+  display: block;
+  width: 100px;
+  position: fixed;
+  z-index: 3;
+  top: 40px;
+  left: $gutter;
+  svg {
+    width: 100%;
+  }
+}
+
+.stackt-logo {
+  fill:#FFFFFF;}

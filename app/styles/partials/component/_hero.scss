@@ -1,0 +1,184 @@
+
+
+.stackt-hero {
+    position: relative;
+    z-index: 0;
+    width: 100%;
+    .owl-carousel .owl-stage-outer {
+        overflow: visible;
+    }
+    .owl-dots {
+        counter-reset: dots;
+        position: absolute;
+        left: $gutter;
+        top: 50%;
+        transform:translateY(-50%);
+        transition: opacity .4s ease-in-out;
+        opacity: 1;
+    }
+    .owl-dot {
+        background: transparent;
+        color: #fff;
+        font-weight: 400;
+        font-size: 24px;
+        text-align: left;
+        &:before {
+            counter-increment:dots;
+            content: counter(dots);
+        }
+        &.active {
+            color: $topaz;
+        }
+    }
+    h4 {
+        line-height: 34px;
+    }
+    .close-x {
+        position: absolute;
+        z-index: 4;
+        right: $gutter;
+        top: $gutter;
+        transition: opacity .4s ease-in-out;
+        opacity: 0;
+    }
+}
+
+.blur-active {
+    .close-x {
+        opacity: 1;
+    }
+}
+
+.discover-active {
+    .owl-dots {
+        
+        opacity: 0;
+    }
+    .blur-active .hero-text-container {
+        opacity: 0;
+    }
+}
+
+.hero-tag {
+    position: absolute;
+    z-index: 1;
+    color: #fff;
+    bottom: $gutter;
+    right: $gutter;
+    text-align: right;
+    width: 100px;
+}
+
+.hero-component {
+    background: #000;
+    width: 100%;
+    height: 100vh;
+	position: relative;
+	display: flex;
+	align-items: center; 
+	justify-content: center;
+	overflow: hidden; 
+    .hero-image-container {
+        z-index: 0;
+		width: 100%;
+		height: 100vh;
+		object-fit: cover;
+		position: absolute;
+		top: 0;
+		left: 0;
+		right: 0;
+		bottom: 0;
+	    display: flex;
+    	justify-content: center;
+        img,
+        video {
+            width: 100%;
+			height: 100vh; 
+			object-fit: cover;
+			object-position: top center;
+			position: absolute;
+        }
+	}
+    .hero-text-container {
+        color: #fff;
+        position: absolute;
+		z-index: 2;
+		left: $gutter*3;
+		opacity: 1;
+		width: 570px;
+        color: #fff;
+        transition: opacity .4s ease-in-out;
+        opacity: 1;
+        h2 {
+            margin-bottom: 40px;
+            font-size: 100px;
+            line-height: 0.95;
+        }
+    }
+    .hero-discover-container {
+        position: absolute;
+        z-index: 3;
+        color: #fff;
+        .row {
+            display: flex;
+            align-items: flex-end;
+            flex-direction: row-reverse;
+        }
+        .text-container {
+
+        }
+        .image-container {
+            display: block;
+            padding-bottom: 80%;
+            overflow: hidden;
+            position: relative;
+            img {
+                position: absolute;
+            }
+        }
+        a {
+            color: #fff;
+        }
+        
+    }
+    .video-controls {
+        display: block;
+        width: 24px;
+        height: 24px;
+        position: absolute;
+        bottom: $gutter;
+        left: $gutter;
+        .icon-play {
+            display: none;
+        }
+        &.paused {
+            .icon-play {
+                display: block;
+            }
+            .icon-pause {
+                display: none;
+            }
+        }
+    }
+}
+
+// .owl-item.active ~ .owl-item {
+//     .hero-component {
+//         overflow: visible;
+//         .hero-text-container {
+//             transition: left 2s ease-in-out;
+//             left: -140%;
+//             opacity: 0;
+//         }
+//     }
+// }
+
+// .owl-item.active {
+//     .hero-component {
+//         overflow: visible;
+//         .hero-text-container {
+//             left: $gutter*3;
+//         }
+//     }
+// }
+

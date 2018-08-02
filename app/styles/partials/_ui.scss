@@ -1,0 +1,57 @@
+.color-aqua,
+a.color-aqua {
+	color: $aqua;
+}
+
+.color-brown,
+a.color-brown {
+	color: $brown;
+}
+
+.color-purple,
+a.color-purple {
+	color: $purple;
+}
+
+.color-red,
+a.color-red {
+	color: $red;	
+}
+
+.bg-purple {
+	background: $purple;
+}
+
+.bg-teal {
+	background: $teal;
+}
+
+.bg-grey {
+	background: $grey;
+}
+
+.tag {
+	font-weight: 600;
+	font-size: 18px;
+	display: inline-block;
+	padding: 10px 20px;
+	line-height: 1em;
+}
+
+.flt-right {
+	float: right;
+}
+
+.slash-blk-after {
+	overflow: visible;
+	&:after {
+		content: ' ';
+		display: block;
+		position: absolute;
+		right: 0;
+		top: 0;
+		height: 100%;
+		border-right: 1px solid #000;
+		transform: rotate(10deg);
+	}
+}

@@ -1,0 +1,42 @@
+
+.site-wrapper {
+	max-width: $contentmaxwidth;
+	margin: 0 auto;
+	background-color: #fff;
+}
+
+.wrapper {
+	@extend .clearfix;
+	margin: 0 auto;
+	overflow-x: hidden;
+}
+
+.spacing-container{
+	max-width: $contentmaxwidth;
+	margin: $gutter auto;
+  	// padding: 0 $gutter;
+}
+
+.gutter-container{
+	max-width: $contentmaxwidth;
+	margin: $gutter auto;
+  	padding: 0 $gutter;
+}
+
+
+@include breakpoint(large) {
+	.inner-gutter-container {
+		padding: 0 $gutter;
+	}
+}
+
+section {
+	h3 {
+		margin-bottom: 60px;
+		line-height: 1em;
+	}
+}
+
+body {
+	overflow-x: hidden;
+}

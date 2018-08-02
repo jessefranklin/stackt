@@ -1,0 +1,51 @@
+.icon-pause {
+    background: transparent url(../../images/pause.png) no-repeat 0 0;
+    background-size: 15px;
+}
+
+.icon-play {
+    background: transparent url(../../images/play.png) no-repeat 0 0;
+    background-size: 32px;
+}
+
+.icon-instagram {
+    background: transparent url(../../images/instagram@2x.png) no-repeat 0 0;
+    background-size: 32px;
+}
+
+.icon-twitter {
+    background: transparent url(../../images/twitter-logo-silhouette@2x.png) no-repeat 0 0;
+    background-size: 32px;
+}
+
+.close-x{
+    position: relative;
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+    overflow: hidden;
+    background: transparent;
+    border: none;
+    &:hover {
+      &::before, &::after {
+        background: #fff;
+      }
+    }
+  
+    &::before, &::after {
+      content: '';
+      position: absolute;
+      height: 1px;
+      width: 100%;
+      top: 50%;
+      left: 0;
+      margin-top: -1px;
+      background: #fff;
+    }
+    &::before {
+        transform:rotate(45deg);
+    }
+    &::after {
+        transform:rotate(-45deg);
+    }
+}

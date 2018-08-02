@@ -1,0 +1,49 @@
+// Normalize
+@import "partials/normalize.scss";
+
+// bower:scss
+@import "bower_components/font-awesome/scss/font-awesome.scss";
+@import "bower_components/bootstrap-sass/assets/stylesheets/_bootstrap.scss";
+// endbower
+
+@import "vendor/owl.carousel.scss";
+@import "vendor/owl.theme.default.scss";
+@import "vendor/aos";
+
+// Fonts
+@import "partials/fonts";
+
+// Functions
+@import "partials/functions";	// Useful Sass functions
+
+// Variables
+@import "partials/variables";	// Color palatte
+
+// // Mixins and Functions
+@import "partials/mixins";		// Useful Sass mixins
+
+// // Structural
+@import "partials/animations";
+@import "partials/global";		// Styles common to entire application. Should keep this pretty lean.
+@import "partials/layout";		// Overall grid layout
+@import "partials/typography";	// Application typography. Basic setup only. Use site/modules.scss for specific module styles, including typography.
+@import "partials/tables";		// General table styles
+@import "partials/ui";			// General UI elements
+@import "partials/buttons";
+@import "partials/icons";
+@import "partials/forms";
+@import "partials/utilities";
+@import "partials/blur";
+@import "partials/component/carousel-theme";		
+
+// // Site
+@import "partials/header";		// Header
+@import "partials/footer";		// Footer
+@import "partials/modules";		// Modules
+
+// // Components 
+@import "partials/component/hero";		// Header
+@import "partials/component/vendors";		// Vendors
+@import "partials/component/tenant";		// Tenant
+@import "partials/component/events";		// Events
+@import "partials/component/discover";		// Discover

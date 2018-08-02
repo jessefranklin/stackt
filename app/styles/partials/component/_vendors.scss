@@ -1,0 +1,22 @@
+
+
+.vendor-container {
+    font-family: $sans;
+    font-size: 40px;
+    line-height: 1.13;
+    margin-bottom: 50px;
+    span {
+        display: inline-block;
+    }
+    a {
+        display: inline-block;
+        &:hover {
+            text-decoration: none;
+        }
+    }
+}
+.stackt-vendors {
+    a {
+        display: inline-block;
+    }
+}

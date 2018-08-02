@@ -1,0 +1,48 @@
+[data-aos="large-up"] {
+    opacity: 0;
+    transform: translateY(100%);
+    transition-property: transform, opacity;
+  
+    &.aos-animate {
+      opacity: 1;
+      transform: translateY(0%);
+    }
+  
+    @media screen and (min-width: 768px) {
+      transform: translateX(100px);
+  
+      &.aos-animate {
+        transform: translateX(0);
+      }
+    }
+  }
+
+
+@keyframes fadeInUp {
+    0% { 
+        opacity: 0;
+        transform: translateY(100%);
+        animation-timing-function: 'ease-in-out';
+    }
+    
+    70% {
+        opacity: 1;
+        transform: translateY(0%);
+        animation-timing-function:'ease-in-out';
+    }
+    100% { 
+        opacity: 1;
+        transform: translateY(0%);
+        animation-timing-function:'ease-in-out';
+    }
+}
+
+.hero-discover-container {
+    // &.animate {
+    //     animation-name: fadeInUp;
+    //     animation-duration: 1s;
+    //     animation-delay: 1s;
+    //     animation-fill-mode: both;
+
+    // }
+}

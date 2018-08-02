@@ -1,0 +1,23 @@
+@include breakpoint(small) {
+	.u-desktop {
+		display: none;
+	}
+}
+
+@include breakpoint(small-up) {
+	.u-mobile {
+		display: none;
+	}
+}
+
+@media only screen and (min-width: 769px) {
+	.u-tablet {
+		display: none;
+	}
+}
+
+@media only screen and (max-width: 768px) {
+	.u-lt-tablet {
+		display: none;
+	}
+}
