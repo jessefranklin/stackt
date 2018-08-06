@@ -24,18 +24,21 @@
   z-index: 4;
   left: $gutter;
   margin-top: 40px;
+  opacity: 0;
   svg {
     width: 100%;
   }
 }
 
-#mask-logo-blk {
+
+.mask-logo-blk {
   position: relative;
   z-index: 4;
+  overflow: hidden;
 }
 
 .stackt-logo {
-  fill:#ccc;}
+  fill:#fff;}
 
 .stackt-logo-black {
   fill:#000; }

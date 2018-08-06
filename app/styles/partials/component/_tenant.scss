@@ -1,3 +1,8 @@
+.stackt-tenant {
+    height: 100vh;
+    overflow: hidden;
+}
+
 #tenant-carousel {
     .hero-text-container {
         max-width: $contentmaxwidth;
@@ -21,4 +26,35 @@
     .tag {
         margin-bottom: 40px;
     } 
+}
+
+@include breakpoint(small) {
+    .stackt-tenant #tenant-carousel {
+        .owl-carousel {
+            height: 100vh;
+            .owl-item {
+                overflow: hidden;
+                position: relative;
+            }
+        }
+        .owl-stage {
+            right: 20px;
+        }
+        .hero-text-container {
+            width: 100%;
+            position: absolute;
+            bottom: 0;
+            .overlay-txt {
+                width: 100%;
+                padding: $gutter;
+                padding-left: $gutter+5;
+                padding-right: $gutter+5;
+                padding-bottom: $gutter+5;
+            }
+
+        }
+        .owl-nav, .owl-dots {
+            display: none;
+        }
+    }
 }

@@ -4,8 +4,9 @@
     position: relative;
     z-index: 0;
     width: 100%;
-    .owl-carousel .owl-stage-outer {
-        overflow: visible;
+    height: 100vh;
+    .owl-carousel {
+        height: 100vh;
     }
     .owl-dots {
         counter-reset: dots;
@@ -51,10 +52,10 @@
 
 .discover-active {
     .owl-dots {
-        
         opacity: 0;
     }
-    .blur-active .hero-text-container {
+    .owl-item.active .hero-component .hero-text-container,
+    .owl-item .hero-text-container {
         opacity: 0;
     }
 }
@@ -109,6 +110,7 @@
         color: #fff;
         transition: opacity .4s ease-in-out;
         opacity: 1;
+
         h2 {
             margin-bottom: 40px;
             font-size: 100px;
@@ -119,17 +121,18 @@
         position: absolute;
         z-index: 3;
         color: #fff;
+        width: 100%;
+        max-width: $contentmaxwidth;
         .row {
             display: flex;
             align-items: flex-end;
-            flex-direction: row-reverse;
         }
         .text-container {
 
         }
         .image-container {
             display: block;
-            padding-bottom: 80%;
+            padding-bottom: 60%;
             overflow: hidden;
             position: relative;
             img {
@@ -162,23 +165,66 @@
     }
 }
 
-// .owl-item.active ~ .owl-item {
-//     .hero-component {
-//         overflow: visible;
-//         .hero-text-container {
-//             transition: left 2s ease-in-out;
-//             left: -140%;
-//             opacity: 0;
-//         }
-//     }
-// }
+.owl-item {
+    .hero-component {
+        .hero-text-container {
+            transition: all .4s ease-in-out;
+            opacity: 0;
+        }
+    }
+}
 
-// .owl-item.active {
-//     .hero-component {
-//         overflow: visible;
-//         .hero-text-container {
-//             left: $gutter*3;
-//         }
-//     }
-// }
+.owl-item.active {
+    .hero-component {
+        .hero-text-container {
+            transition: all .4s ease-in-out;
+            opacity: 1;
+        }
+    }
+}
+
+
+@include breakpoint(small){
+    .stackt-hero {
+        .hero-component {
+            .hero-text-container {
+                width: 80%;
+                left: $gutter;
+                h2 {
+                    font-size: 40px;
+                }
+            }
+
+        }
+        .owl-dots {
+            top: auto;
+            bottom: 15px;
+            width: 70%;
+            left: 100px;
+            button.owl-dot {
+                display: inline-block;
+            }
+        }
+        .hero-tag {
+            display: none;
+        }
+        .hero-discover-container {
+            top: 0;
+            .image-container {
+                padding-bottom: 70%;
+                img {
+                    width: 100%;
+                }
+            }
+            .text-container {
+                padding: $gutter;
+            }
+            .row {
+                display: flex;
+                flex-direction: column;
+                flex-direction: column-reverse; 
+            }
+        }
+    }
+}
 

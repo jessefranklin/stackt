@@ -1,12 +1,17 @@
 * {
 	box-sizing: border-box;
 }
+html {
+	overflow: hidden;
+}
 
 body {
 	margin: 0;
 	font-size: 16px;
 	line-height: 1.875;
 	font-family: $body;
+	outline: none;
+	overflow: hidden;
 }
 
 a {
@@ -36,3 +41,9 @@ hr {
 }
 
 
+.img-container {
+	img {
+		width: 100%;
+		height: auto;
+	}
+}

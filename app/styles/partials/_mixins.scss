@@ -1,10 +1,14 @@
 // Usage @include breakpoint(small) { /* Styles here */ }
 @mixin breakpoint($point) {
-	$small: 767px; // Up to 767px
+	$small: 768px; // Up to 767px
 	$medium: 1024px; // Up to 1024px
+	$lg: 1200px;
 	$large: 1440px;
 	@if $point == large {
 		@media only screen and (max-width: $large) { @content; }
+	}
+	@if $point == lg {
+		@media only screen and (min-width: $lg) and (max-width: $large)  { @content; }
 	}
 	@else if $point == medium-large {
 		@media only screen and (min-width: $small+1) { @content; }

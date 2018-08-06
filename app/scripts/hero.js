@@ -13,11 +13,23 @@ $(document).ready(function(){
 		loop:true,
 		items: 1,
 		slideSpeed : 800,
-    paginationSpeed : 800,
-		video:true
+		paginationSpeed : 800,
+		video:true,
+		margin:10,
+		responsiveClass:true,
+		responsive:{
+			767:{
+				items:1,
+				nav:false
+			}
+		}
 	});
-	
-	$('.owl-item.active video').get(0).play();
+
+	$(window).on('load',function(){
+		if($('.owl-item.active video').length){
+			$('.owl-item.active video').get(0).play();
+		}	
+	});
 
 	owl.on('translate.owl.carousel',function(e){
 		$('.blur-active').removeClass('blur-active');
@@ -61,6 +73,7 @@ $(document).ready(function(){
 	});
 
 	$('body').on('click','.js-discover',function(){
+		$(this).closest('div.hero-component').find('div.hero-discover-container').find('.aos-init').removeClass('aos-animate');
 		$(this).closest('div.hero-component').addClass('blur-active');
 		$('#stackt-hero').addClass('discover-active');
 		$(this).closest('div.hero-component').find('div.hero-discover-container').show();

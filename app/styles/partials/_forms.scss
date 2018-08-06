@@ -15,7 +15,21 @@ form {
         font-size: 12px;
         font-weight: 400;
     }
+    .input-group {
+        width: 100%;
+        margin-bottom: 30px;
+        input[type="text"]{
+            width: 100%;
+        }
+        button {
+            position: absolute;
+            right: 0;
+            bottom: 0;
+            border: 0px;
+        }
+    }
     input[type="text"]{
+        background: transparent;
         &::-webkit-input-placeholder { /* Chrome/Opera/Safari */
             font-weight: 600;
             color: $light-grey;

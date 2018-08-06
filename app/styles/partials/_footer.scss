@@ -8,6 +8,21 @@ footer {
 	h3 {
 		font-family: $body;
 	}
+	.row:first-child {
+		padding-bottom: 40px;
+	}
+
+	.spacing-container{
+		padding-bottom: 0px;
+	}
+	.who-we-are {
+		h3 {
+			margin-bottom: 30px;
+		}
+		p {
+			margin-bottom: 50px;
+		}
+	}
 	.social-container {
 		.mention {
 			font-weight: 600;
@@ -15,10 +30,17 @@ footer {
 			margin-right: 30px;
 			float: left;
 			line-height: 1em;
+			@include breakpoint(small) {
+				font-size: 24px;
+			}
 		}
 		a {
 			display: inline-block;
 			margin-right: 10px;
+		}
+		@include breakpoint(small) {
+			margin-bottom: 60px;
+
 		}
 	}
 	.privacy-container {
@@ -35,6 +57,20 @@ footer {
 	.Hours {
 		border-left: 1px solid #fff;
 		padding-left: 20px;
+	}
+}
+
+@include breakpoint(small) {	
+	.privacy-row{
+		display: flex;
+		flex-direction: column-reverse;
+		.address-container .col-md-8 {
+			padding-left: 0px;
+			.Hours {
+				border-left: none;
+
+			}
+		}
 	}
 }
 
