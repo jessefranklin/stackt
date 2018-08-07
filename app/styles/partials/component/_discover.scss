@@ -11,8 +11,12 @@
         width: 100%;
     .block {
         height: 450px;
-        h2,h3 {
-            font-family: $body;
+        h2{
+            font-family: $sans;
+        }
+        
+        h3 {
+            font-family: $sans;
         }
         &.discover-block {
             color: #fff;
@@ -36,12 +40,13 @@
         &.collaborate-block {
             a {
                 color: #000;
-                border-bottom: 2px solid #000;
                 &:hover {
                     text-decoration: none;
                 }
             }
-            
+            h2 {
+                line-height: 58px;
+            }
             .content-container {
                 padding-bottom: 60px; 
                 position: absolute;
@@ -52,6 +57,7 @@
                 @include breakpoint(lg) {
                     left: auto;
                     right: 0;
+                    padding-left: 15px;
                 }
             }
             
@@ -60,15 +66,34 @@
     }
     .email-signup {
         .input-group {
-            input[type="text"]{
+            input[type="text"],
+            input[type="email"]{
                 color: #fff;
             }
             button {
                 color: #000;
                 background: $teal;
             }
+            .msg {
+                position: absolute;
+                display: none;
+                font-size: 12px;
+            }
+            &.error {
+                input[type="email"]{
+                    border-bottom: 2px solid $red;
+                }
+                .msg {
+                    display: block;
+                    color: $red;
+                }
+            }
+            &.valid input[type="email"]{
+                border-bottom: 2px solid $teal;
+            }
         }
-        input[type="text"]{
+        input[type="text"],
+        input[type="email"]{
             border-bottom: 2px solid #fff;
             &::-webkit-input-placeholder { /* Chrome/Opera/Safari */
                 color: #fff;

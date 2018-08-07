@@ -17,8 +17,9 @@ form {
     }
     .input-group {
         width: 100%;
-        margin-bottom: 30px;
-        input[type="text"]{
+        margin-bottom: 40px;
+        input[type="text"],
+        input[type="email"]{
             width: 100%;
         }
         button {
@@ -28,7 +29,8 @@ form {
             border: 0px;
         }
     }
-    input[type="text"]{
+    input[type="text"],
+    input[type="email"]{
         background: transparent;
         &::-webkit-input-placeholder { /* Chrome/Opera/Safari */
             font-weight: 600;

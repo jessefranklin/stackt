@@ -8,16 +8,18 @@ footer {
 	h3 {
 		font-family: $body;
 	}
-	.row:first-child {
-		padding-bottom: 40px;
-	}
+	
 
 	.spacing-container{
 		padding-bottom: 0px;
+		>.row:first-child {
+			padding-bottom: 40px;
+		}
 	}
 	.who-we-are {
 		h3 {
 			margin-bottom: 30px;
+			font-family: $sans;
 		}
 		p {
 			margin-bottom: 50px;

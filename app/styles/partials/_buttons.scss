@@ -21,11 +21,11 @@ a {
   background: transparent;
   border: none;
   padding: 0px 20px 0 0;
-  letter-spacing: 5px;
-  font-size: 14px;
-  text-transform: uppercase;
-  font-weight: 400;
-  background: transparent url('/images/chev-white.png') no-repeat right 8px;
+  letter-spacing: 2px;
+  font-size: 18px;
+  font-family: $body;
+  font-weight: 600;
+  background: transparent url('/images/chev-white.png') no-repeat right 11px;
   background-size: 7px;
 }
 
@@ -34,14 +34,21 @@ a {
   border: none;
   padding: 0px; 
   display: block;
-  width: 40px;
-  height: 40px;
+  width: 52px;
+  height: 52px;
 
 }
 
 .view-more {
-  font-family: $sans;
+  font-family: $body;
   font-size: 24px;
+  font-weight: 600;
   color: #000;
   line-height: 1.88;
+}
+
+
+button[disabled] {
+  background: $light-grey;
+  cursor: default;
 }

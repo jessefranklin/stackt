@@ -13,6 +13,22 @@ a.color-purple {
 	color: $purple;
 }
 
+.color-pink,
+a.color-pink {
+	color: $pink;	
+}
+
+.color-mustard,
+a.color-mustard {
+	color: $mustard;	
+}
+
+.color-green,
+a.color-green {
+	color: $green;	
+}
+
+
 .color-red,
 a.color-red {
 	color: $red;	
@@ -36,6 +52,9 @@ a.color-red {
 	display: inline-block;
 	padding: 10px 20px;
 	line-height: 1em;
+	&.color-green {
+		border: 1px solid $green;
+	}
 }
 
 .flt-right {
@@ -51,7 +70,7 @@ a.color-red {
 		right: 30px;
 		top: 0;
 		height: 100%;
-		border-right: 2px solid #000;
-		transform: rotate(10deg);
+		border-right: 1px solid #000;
+		transform: rotate(18deg);
 	}
 }
