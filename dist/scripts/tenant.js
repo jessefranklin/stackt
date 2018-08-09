@@ -25,5 +25,37 @@ $(document).ready(function () {
 			}
 		}
 	});
+
+	$(window).on('load', function () {
+		if (owltenant.find('.owl-item.active video').length) {
+			owltenant.find('.owl-item.active video').get(0).play();
+		}
+	});
+
+	owltenant.on('translate.owl.carousel', function (e) {
+		owltenant.find('.owl-item video').each(function () {
+			$(this).get(0).pause();
+		});
+	});
+
+	owltenant.on('translated.owl.carousel', function (e) {
+		if (owltenant.find('.owl-item.active video').length) {
+			owltenant.find('.owl-item.active video').get(0).play();
+		}
+	});
+
+	owltenant.on('click', '.js-pause', function () {
+		$(this).parent('div').addClass('paused');
+		owltenant.find('.owl-item.active video').get(0).pause();
+	});
+
+	setTimeout(function () {
+		$('div.hero-discover-container').find('.aos-init').removeClass('aos-animate');
+	}, 500);
+
+	owltenant.on('click', '.js-play', function () {
+		$(this).parent('div').removeClass('paused');
+		owltenant.find('.owl-item.active video').get(0).play();
+	});
 });
 //# sourceMappingURL=tenant.js.map

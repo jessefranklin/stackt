@@ -45,10 +45,10 @@
             position: absolute;
             bottom: 0;
             .overlay-txt {
-                width: 100%;
+                width: 80%;
                 padding: $gutter;
                 padding-left: $gutter+5;
-                padding-right: $gutter+5;
+                margin-right: $gutter+5;
                 padding-bottom: $gutter+5;
             }
 

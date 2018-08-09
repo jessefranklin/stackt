@@ -11,17 +11,17 @@ $(document).ready(function(){
   
 });
 
-function emailField(this){
-    if (validate($(this).val())) {
-        $(this).parent().removeClass('error').addClass('valid');
-        $(this).parent().find('button').removeAttr('disabled');
+function emailField(that){
+    if (validate($(that).val())) {
+        $(that).parent().removeClass('error').addClass('valid');
+        $(that).parent().find('button').removeAttr('disabled');
     } else {
-        $(this).parent().removeClass('valid').addClass('error');
-        $(this).parent().find('button').attr('disabled','disabled');
+        $(that).parent().removeClass('valid').addClass('error');
+        $(that).parent().find('button').attr('disabled','disabled');
     }
 }
 
 function validate(email) {
     var re = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
     return re.test(email);
-};
+}
