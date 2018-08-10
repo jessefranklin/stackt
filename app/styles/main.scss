@@ -15,6 +15,7 @@
 
 // Functions
 @import "partials/functions";	// Useful Sass functions
+@import "partials/hamburger";	
 
 // Variables
 @import "partials/variables";	// Color palatte
@@ -37,6 +38,7 @@
 @import "partials/component/carousel-theme";		
 
 // // Site
+@import "partials/nav";
 @import "partials/header";		// Header
 @import "partials/footer";		// Footer
 @import "partials/modules";		// Modules
