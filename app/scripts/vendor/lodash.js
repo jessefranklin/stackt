@@ -218,7 +218,7 @@
       rsBreakRange = rsMathOpRange + rsNonCharRange + rsPunctuationRange + rsSpaceRange;
 
   /** Used to compose unicode capture groups. */
-  var rsApos = "['\u2019]",
+  var rsApos = '[\'\u2019]',
       rsAstral = '[' + rsAstralRange + ']',
       rsBreak = '[' + rsBreakRange + ']',
       rsCombo = '[' + rsComboRange + ']',
@@ -377,7 +377,7 @@
     '\u017a': 'z',  '\u017c': 'z', '\u017e': 'z',
     '\u0132': 'IJ', '\u0133': 'ij',
     '\u0152': 'Oe', '\u0153': 'oe',
-    '\u0149': "'n", '\u017f': 's'
+    '\u0149': '\'n', '\u017f': 's'
   };
 
   /** Used to map characters to HTML entities. */
@@ -386,7 +386,7 @@
     '<': '&lt;',
     '>': '&gt;',
     '"': '&quot;',
-    "'": '&#39;'
+    '\'': '&#39;'
   };
 
   /** Used to map HTML entities to characters. */
@@ -395,13 +395,13 @@
     '&lt;': '<',
     '&gt;': '>',
     '&quot;': '"',
-    '&#39;': "'"
+    '&#39;': '\''
   };
 
   /** Used to escape characters for inclusion in compiled string literals. */
   var stringEscapes = {
     '\\': '\\',
-    "'": "'",
+    '\'': '\'',
     '\n': 'n',
     '\r': 'r',
     '\u2028': 'u2028',
@@ -14786,7 +14786,7 @@
           isEvaluating,
           index = 0,
           interpolate = options.interpolate || reNoMatch,
-          source = "__p += '";
+          source = '__p += \'';
 
       // Compile the regexp to match each delimiter.
       var reDelimiters = RegExp(
@@ -14812,14 +14812,14 @@
         // Replace delimiters with snippets.
         if (escapeValue) {
           isEscaping = true;
-          source += "' +\n__e(" + escapeValue + ") +\n'";
+          source += '\' +\n__e(' + escapeValue + ') +\n\'';
         }
         if (evaluateValue) {
           isEvaluating = true;
-          source += "';\n" + evaluateValue + ";\n__p += '";
+          source += '\';\n' + evaluateValue + ';\n__p += \'';
         }
         if (interpolateValue) {
-          source += "' +\n((__t = (" + interpolateValue + ")) == null ? '' : __t) +\n'";
+          source += '\' +\n((__t = (' + interpolateValue + ')) == null ? \'\' : __t) +\n\'';
         }
         index = offset + match.length;
 
@@ -14828,7 +14828,7 @@
         return match;
       });
 
-      source += "';\n";
+      source += '\';\n';
 
       // If `variable` is not specified wrap a with-statement around the generated
       // code to add the data object to the top of the scope chain.
@@ -14847,14 +14847,14 @@
           ? ''
           : 'obj || (obj = {});\n'
         ) +
-        "var __t, __p = ''" +
+        'var __t, __p = \'\'' +
         (isEscaping
            ? ', __e = _.escape'
            : ''
         ) +
         (isEvaluating
           ? ', __j = Array.prototype.join;\n' +
-            "function print() { __p += __j.call(arguments, '') }\n"
+            'function print() { __p += __j.call(arguments, \'\') }\n'
           : ';\n'
         ) +
         source +

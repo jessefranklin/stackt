@@ -1,37 +1,58 @@
 .color-aqua,
 a.color-aqua {
 	color: $aqua;
+	&:hover {
+		color: $aqua;
+	}
 }
 
 .color-brown,
 a.color-brown {
 	color: $brown;
+	&:hover {
+		color: $brown;
+	}
 }
 
 .color-purple,
 a.color-purple {
 	color: $purple;
+	&:hover {
+		color: $purple;
+	}
 }
 
 .color-pink,
 a.color-pink {
 	color: $pink;	
+	&:hover {
+		color: $pink;
+	}
 }
 
 .color-mustard,
 a.color-mustard {
 	color: $mustard;	
+	&:hover {
+		color: $mustard;
+	}
 }
 
 .color-green,
 a.color-green {
 	color: $green;	
+	&:hover {
+		color: $green;
+	}
 }
 
 
 .color-red,
 a.color-red {
-	color: $red;	
+	color: $red;
+	&:hover {
+		color: $red;
+	}	
 }
 
 .bg-purple {

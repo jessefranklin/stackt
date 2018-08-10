@@ -26,8 +26,8 @@ $(document).ready(function(){
 	});
 
 	$(window).on('load',function(){
-		if($('.owl-item.active video').length){
-			$('.owl-item.active video').get(0).play();
+		if(owl.find('.owl-item.active video').length){
+			owl.find('.owl-item.active video').get(0).play();
 		}	
 	});
 
@@ -58,7 +58,7 @@ $(document).ready(function(){
 		$('.owl-item.active video').attr('autoplay',true).attr('loop',true);
 	}
 
-	$('body').on('click','.js-pause',function(){
+	owl.on('click','.js-pause',function(){
 		$(this).parent('div').addClass('paused');
 		$('.owl-item.active video').get(0).pause();
 	});
@@ -67,12 +67,12 @@ $(document).ready(function(){
 		$('div.hero-discover-container').find('.aos-init').removeClass('aos-animate');
 	},500);
 
-	$('body').on('click','.js-play',function(){
+	owl.on('click','.js-play',function(){
 		$(this).parent('div').removeClass('paused');
 		$('.owl-item.active video').get(0).play();
 	});
 
-	$('body').on('click','.js-discover',function(){
+	owl.on('click','.js-discover',function(){
 		$(this).closest('div.hero-component').find('div.hero-discover-container').find('.aos-init').removeClass('aos-animate');
 		$(this).closest('div.hero-component').addClass('blur-active');
 		$('#stackt-hero').addClass('discover-active');
@@ -81,7 +81,7 @@ $(document).ready(function(){
 		$('.owl-item.active video').get(0).pause();
 	});
 
-	$('body').on('click','.js-close',function(){
+	owl.on('click','.js-close',function(){
 		var view = this;
 		$('div.hero-discover-container').fadeTo(600, 0, 
 			function(){
