@@ -1,0 +1,8 @@
+start
+/node_modules/
+/.idea/
+!*.gitkeep/
+npm-debug.log
+
+# OSX
+.DS_Store
