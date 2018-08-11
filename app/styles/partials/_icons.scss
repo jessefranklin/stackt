@@ -36,9 +36,13 @@
     overflow: hidden;
     background: transparent;
     border: none;
+    &::before, &::after {
+      transition: background .4s ease-in-out;
+      background: #fff;
+    }
     &:hover {
       &::before, &::after {
-        background: #fff;
+        background: $teal;
       }
     }
   

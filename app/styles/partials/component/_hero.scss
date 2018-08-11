@@ -11,11 +11,20 @@
     .owl-dots {
         counter-reset: dots;
         position: absolute;
-        left: $gutter;
         top: 50%;
         transform:translateY(-50%);
         transition: opacity .4s ease-in-out;
         opacity: 1;
+        max-width: $contentmaxwidth;
+        width: 100%;
+        margin: 0 auto;
+        z-index: 1;
+        left: 50%;
+        transform: translate(-50%,0);
+        @include breakpoint(large) {
+            padding-left: $gutter;
+            padding-right: $gutter;
+        }
     }
     .owl-dot {
         background: transparent;
@@ -41,7 +50,11 @@
         top: $gutter;
         transition: opacity .4s ease-in-out;
         opacity: 0;
+        &:hover {
+
+        }
     }
+
 }
 
 .blur-active {
@@ -54,9 +67,24 @@
     .owl-dots {
         opacity: 0;
     }
+    
     .owl-item.active .hero-component .hero-text-container,
     .owl-item .hero-text-container {
         opacity: 0;
+    }
+    + .hero-tag {
+         opacity: 0;
+    }
+    .hero-component .hero-image-container {
+        &::after {
+            content: ' ';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(#000,.2);
+        }
     }
 }
 
@@ -68,6 +96,12 @@
     right: $gutter;
     text-align: right;
     width: 100px;
+    transition: opacity .4s ease-in-out;
+    opacity: 1;
+    h4 {
+        line-height: 1.11;
+
+    }
 }
 
 .hero-component {
@@ -98,6 +132,16 @@
 			object-fit: cover;
 			object-position: top center;
 			position: absolute;
+        }
+        &::after {
+            content: ' ';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            transition: background .4s ease-in-out;
+            background: rgba(#000,0);
         }
 	}
     .hero-text-container {
@@ -142,6 +186,10 @@
         a {
             color: #fff;
         }
+         @include breakpoint(large) {
+                padding-left: $gutter;
+                padding-right: $gutter;
+              }
         
     }
     .video-controls {
@@ -149,8 +197,18 @@
         width: 24px;
         height: 24px;
         position: absolute;
+        z-index: 1;
         bottom: $gutter;
-        left: $gutter;
+        max-width: $contentmaxwidth;
+        width: 100%;
+        margin: 0 auto;
+        z-index: 1;
+        left: 50%;
+        transform: translate(-50%,0);
+        @include breakpoint(large) {
+            padding-left: $gutter;
+            padding-right: $gutter;
+        }
         .icon-play {
             display: none;
         }
@@ -200,7 +258,6 @@
             top: auto;
             bottom: 15px;
             width: 70%;
-            left: 100px;
             button.owl-dot {
                 display: inline-block;
             }
@@ -208,8 +265,13 @@
         .hero-tag {
             display: none;
         }
+        .video-controls {
+            bottom: 30px;
+        }
         .hero-discover-container {
             top: 0;
+            padding-left: 0;
+            padding-right: 0;
             .image-container {
                 padding-bottom: 70%;
                 img {

@@ -49,6 +49,12 @@ footer {
 		a {
 			margin-right: 20px;
 		}
+		@include breakpoint(small) {
+			padding-top: 50px;
+			a {
+				display: block;
+			}
+		}
 	}
 	.address-container {
 		line-height: 1.4em;
@@ -59,6 +65,10 @@ footer {
 	.Hours {
 		border-left: 1px solid #fff;
 		padding-left: 20px;
+
+		@include breakpoint(small) {
+			padding-left: 15px;
+		}
 	}
 }
 

@@ -6,30 +6,71 @@
 }
 
 .brand-logo {
+  max-width: $contentmaxwidth;
+  width: 100%;
+  margin: 0 auto;
   display: block;
-  width: 100px;
   position: fixed;
-  z-index: 3;
-  top: 40px;
-  left: $gutter;
-  svg {
-    width: 100%;
+  z-index: 3; 
+  left: 50%;
+  transform: translate(-50%,0);
+  @include breakpoint(large) {
+    padding-left: $gutter;
+    padding-right: $gutter;
+  }
+  a {
+    width: 100px;
+    top: 40px;
+    display: block;
+    position: fixed;
+    @include breakpoint(small){
+      width: 70px; 
+    }
+    svg {
+      width: 100%;
+    }
   }
 }
+
+
 
 .brand-logo-black {
+  max-width: $contentmaxwidth;
+  width: 100%;
+  margin: 0 auto;
   display: block;
-  width: 100px;
   position: absolute;
   z-index: 4;
-  left: $gutter;
-  margin-top: 40px;
-  opacity: 0;
-  svg {
-    width: 100%;
+  left: 50%;
+  transform: translate(-50%,0);
+  @include breakpoint(large) {
+    padding-left: $gutter;
+    padding-right: $gutter;
   }
+  a {  
+    width: 100px;
+    display: block;
+    position: relative;
+    margin-top: 40px;
+    @include breakpoint(small){
+      width: 70px; 
+    }
+    svg {
+      width: 100%;
+    }
+  }
+
 }
 
+.brand-logo,
+.brand-logo-black {
+  &.sticky {
+    &.show {
+      a {
+      }
+    }
+  }
+} 
 
 .mask-logo-blk {
   position: relative;

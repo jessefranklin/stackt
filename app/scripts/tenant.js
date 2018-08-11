@@ -36,6 +36,7 @@ $(document).ready(function(){
 		owltenant.find('.owl-item video').each(function(){
 		  $(this).get(0).pause();
 		});
+		owltenant.find('.video-controls').removeClass('paused');
 	});
 
 	owltenant.on('translated.owl.carousel',function(e){

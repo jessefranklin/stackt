@@ -1,8 +1,12 @@
+*:focus {
+    outline: none;
+}
+
 a {
-  transition: opacity .4s ease-in-out;
+  transition: opacity .4s ease-in-out 0s;
   opacity: 1;
   &:hover {
-    opacity: .5;
+    opacity: .5 !important;
     text-decoration: none;
     color: inherit;
   }
@@ -24,8 +28,13 @@ a {
   font-size: 18px;
   font-family: $body;
   font-weight: 600;
-  background: transparent url('/images/chev-white.png') no-repeat right 11px;
+  background: transparent url('/images/chev-white.png') no-repeat right 12px;
   background-size: 7px;
+  transition: opacity .4s ease-in-out;
+  opacity: 1;
+  &:hover {
+    opacity: .5 !important;
+  }
 }
 
 .btn-qu {
@@ -35,7 +44,11 @@ a {
   display: block;
   width: 52px;
   height: 52px;
-
+  transition: opacity .4s ease-in-out;
+  opacity: 1;
+  &:hover {
+    opacity: .5 !important;
+  }
 }
 
 .view-more {

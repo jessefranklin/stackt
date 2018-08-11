@@ -9,6 +9,17 @@
         right: $gutter;
     }
     .owl-nav {
+        max-width: $contentmaxwidth;
+        width: 100%;
+        margin: 0 auto;
+        display: block;
+        z-index: 3; 
+        left: 50%;
+        transform: translate(-50%,0);
+        @include breakpoint(large) {
+            padding-left: $gutter;
+            padding-right: $gutter;
+          }
         .owl-prev {
             background: transparent url(../images/chev.png) no-repeat 10px 0;
             background-size: 20px;
@@ -17,6 +28,11 @@
             height: 40px;
             border: none;
             display: inline;
+            transition: opacity .4s ease-in-out;
+            opacity: 1;
+            &:hover {
+                opacity: .5;
+            }
         }
         .owl-next {
             background: transparent url(../images/chev.png) no-repeat 10px 7px;
@@ -25,6 +41,11 @@
             height: 40px;
             display: inline;
             margin-left: 20px;
+            transition: opacity .4s ease-in-out;
+            opacity: 1;
+            &:hover {
+                opacity: .5;
+            }
         }
     }
     .owl-dots {
@@ -34,6 +55,7 @@
         left: 50%;
         transform: translateX(-50%);
         text-align: center;
+        z-index: 4;
         button.owl-dot {
             background: transparent;
             display: inline;

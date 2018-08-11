@@ -10,7 +10,7 @@
         height: 100%;
         width: 100%;
     .block {
-        height: 450px;
+        height: 650px;
         h2{
             font-family: $sans;
             @include breakpoint(small) {
@@ -49,6 +49,9 @@
             }
             h2 {
                 line-height: 58px;
+                @include breakpoint(small) {
+                    line-height: 1.11;
+                }
             }
             .content-container {
                 padding-bottom: 60px; 
@@ -124,7 +127,7 @@
         background: transparent;
         .block {
             height: auto;
-            min-height: 450px;
+            min-height: 550px;
              &.discover-block {
                 background: $grey;
                 .content-container {
@@ -132,7 +135,7 @@
                 }
             }
             &.collaborate-block {
-                background: $teal;
+                background: $teal url(../images/collab-bg.jpg) repeat 0 0;
                 display: flex;
                 justify-content: flex-end;
                 .content-container {
@@ -141,7 +144,7 @@
                     float: none;
                     padding-left: 0px;
                     margin-left: auto;
-                    left: auto;
+                    left: 9%;
                 }
             }
         }

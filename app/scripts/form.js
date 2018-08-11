@@ -1,6 +1,11 @@
+var query = Modernizr.mq('(max-width: 768px)');
 
 $(document).ready(function(){
 
+    if(!query){
+        $('.email-signup').find('button').attr('disabled','disabled');
+    }
+    
     $('.email-signup').on('blur', 'input[type="email"]', function () {
         emailField(this)
     });
@@ -8,16 +13,21 @@ $(document).ready(function(){
     $('.email-signup').on('keyup', '.error input[type="email"]', function () {
         emailField(this);
     });
+
   
 });
 
 function emailField(that){
     if (validate($(that).val())) {
         $(that).parent().removeClass('error').addClass('valid');
-        $(that).parent().find('button').removeAttr('disabled');
+        if(!query){
+            $(that).parent().find('button').removeAttr('disabled');
+        }
     } else {
         $(that).parent().removeClass('valid').addClass('error');
-        $(that).parent().find('button').attr('disabled','disabled');
+        if(!query){
+            $(that).parent().find('button').attr('disabled','disabled');
+        }
     }
 }
 

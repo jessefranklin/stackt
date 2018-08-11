@@ -1,7 +1,10 @@
 var resizeTimer;
 
 $(document).ready(function(){
+  $(document).scrollTop(0);
+
   //Animation library
+
   $(window).on('load',function(){
     AOS.init({
         offset: 100,
@@ -18,8 +21,24 @@ $(document).ready(function(){
       $('body,html').css({'overflow-y':'auto'});
     },1000);
 
+    var logoM = 100;
+
+    if(Modernizr.mq('(max-width: 990px)')){
+      logoM = 40;
+    }
+
+    var $header = $('body').find('.stackt-discover'),
+        $sticky = $('body').find('.sticky');
+
+    $(window).on('scroll', function() {
+      var top = $('html').scrollTop() || $('body').scrollTop();
+      if(top > $header.offset().top+logoM){
+        $sticky.addClass('show');
+      } else {
+        $sticky.removeClass('show');
+      }
+    });
   });
-  
 
   $(window).on('resize',function(){
 
@@ -34,7 +53,9 @@ $(document).ready(function(){
         el.css({top: top});
         $(window).on('scroll', function() {
           var top = (window.pageYOffset || document.scrollTop) - topContainer;
-          el.css({top: top});
+          if(!el.hasClass('show')){
+            el.css({top: top});
+          }
         });
       });
 
@@ -54,7 +75,9 @@ function blackmask(){
     $(this).css('opacity',1);
     $(window).on('scroll', function() {
       var top = (window.pageYOffset || doc.scrollTop) - topContainer;
-      el.css({top: top});
+      if(!el.hasClass('show')){
+        el.css({top: top});
+      }
     });
   });
 }

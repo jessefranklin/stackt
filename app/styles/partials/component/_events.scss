@@ -16,7 +16,6 @@
     }
     .coming-soon {
         min-width: 240px;
-        padding: 20px 40px 20px 0px;
         height: 180px;
         margin-right: 60px;
         display: flex;
@@ -24,7 +23,6 @@
         justify-content: center;
     }
     .in-the-know.slash-blk-after {
-        padding: 20px 40px 20px 0;
         height: 180px;
         display: flex;
         align-items: center;
@@ -43,7 +41,6 @@
     .events-container .row {
         display: flex;
         align-items: center;
-        justify-content: space-between;
         @include breakpoint(small) {
             display: block;
             .coming-soon {
@@ -68,7 +65,6 @@
                 padding-bottom: 15px;
                 margin: 0 0 40px;
                 h4 {
-                    font-size: 62px;
                     margin-bottom: 15px;
                 }
             }
