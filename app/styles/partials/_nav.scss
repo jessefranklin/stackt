@@ -1,0 +1,270 @@
+//== Media queries breakpoints
+//
+//## Define the breakpoints at which your layout will change, adapting to different screen sizes.
+
+// Extra extra small screen / phone
+// Note: Deprecated @screen-xs and @screen-phone as of v3.0.1
+$screen-xxs:                  375px;
+$screen-xxs-min:              $screen-xxs;
+
+// Extra small screen / phone
+// Note: Deprecated @screen-xs and @screen-phone as of v3.0.1
+$screen-xs:                  480px;
+$screen-xs-min:              $screen-xs;
+$screen-phone:               $screen-xs-min;
+
+// Small screen / tablet
+// Note: Deprecated @screen-sm and @screen-tablet as of v3.0.1
+$screen-sm:                  768px;
+$screen-sm-min:              $screen-sm;
+$screen-tablet:              $screen-sm-min;
+
+// Medium screen / desktop
+// Note: Deprecated @screen-md and @screen-desktop as of v3.0.1
+$screen-md:                  992px;
+$screen-md-min:              $screen-md;
+$screen-desktop:             $screen-md-min;
+
+// Large screen / wide desktop
+// Note: Deprecated @screen-lg and @screen-lg-desktop as of v3.0.1
+$screen-lg:                  1200px;
+$screen-lg-min:              $screen-lg;
+$screen-lg-desktop:          $screen-lg-min;
+
+// Extra Large screen / wide desktop
+// Note: Deprecated @screen-lg and @screen-lg-desktop as of v3.0.1
+$screen-xl:                  1400px;
+$screen-xl-min:              $screen-lg;
+$screen-xl-desktop:          $screen-lg-min;
+
+
+// So media queries don't overlap when required, provide a maximum
+$screen-xxs-max:              ($screen-xs-min - 1);
+$screen-xs-max:              ($screen-sm-min - 1);
+$screen-sm-max:              ($screen-md-min - 1);
+$screen-md-max:              ($screen-lg-min - 1);
+$screen-lg-max:              ($screen-xl-min - 1);
+
+// Common styles
+.mobile-only {
+	@media screen and (min-width:$screen-sm){
+		display: none !important;
+	}
+}
+.desktop-only {
+	@media screen and (max-width:$screen-xs-max){
+		display: none !important;
+	}
+}
+
+.container {
+	position: relative;
+	padding-left: 20px;
+	padding-right: 20px;
+	@media screen and (min-width:$screen-sm){
+		padding-right: 15px;
+		padding-left: 15px;
+		max-width: 100%;
+		margin-left: auto;
+		margin-right: auto;
+	}
+	@media screen and (min-width:$screen-lg){
+		width: 1020px;
+	}
+	@media screen and (min-width:$screen-xl){
+		width: 1140px;
+	}
+}
+.container--mobile {
+	position: relative;
+	margin-left: auto;
+	margin-right: auto;
+	padding-right: 20px;
+	padding-left: 20px;
+	@media screen and (min-width: 576px){
+		width: 540px;
+		max-width: 100%;
+	}
+	@media screen and (min-width:$screen-sm){
+		padding: 0;
+		margin: 0;
+		width: 100%;
+	}
+}
+.container--desktop {
+	@media screen and (min-width:$screen-sm){
+		position: relative;
+		margin-left: auto;
+		margin-right: auto;
+		padding-right: 15px;
+		padding-left: 15px;
+		width: 720px;
+		max-width: 100%;
+	}
+	@media screen and (min-width:$screen-md){
+		width: 960px;
+	}
+	@media screen and (min-width:$screen-lg){
+		width: 1020px;
+	}
+	@media screen and (min-width:$screen-xl){
+		width: 1140px;
+	}
+}
+
+
+
+// Style guide
+
+.title {
+	font-family: 'ShearmanStd-Bold';
+	font-size: 40px;
+	line-height: 1.13;
+	@media screen and (min-width:$screen-sm){
+		font-size: 50px;
+	}
+}
+
+.body-copy {
+	font-size: 16px;
+	font-family: 'Helvetica';
+	line-height: 1.38;
+	@media screen and (min-width:$screen-sm){
+
+	}
+}
+
+
+.see-all {
+	font-family: "Helvetica-Bold";
+	font-size: 24px;
+	line-height: 1.88;
+	text-decoration: none;
+	color: black;
+	&:hover {
+		color: #00feb9;
+		text-decoration: underline;
+	}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// Global navigation/dropdown menu
+.stackt-nav {
+	position: fixed;
+	width: 100%;
+	z-index: 999;
+
+	ul,li {
+		padding: 0;
+		list-style: none;
+	}
+
+	.hamburger {
+		position: absolute;
+		right: 0;
+		z-index: 1000;
+
+		&.is-active {
+			.hamburger-inner, .hamburger-inner::before, .hamburger-inner::after {
+				background-color: white;
+			}
+		}
+	}
+
+	.menu {
+		position: fixed;
+		top: 0;
+		transition: all 0.75s ease;
+		left: -100vw;
+		background-color: black;
+		height: 100vh;
+		width: 100%;
+		@media screen and (min-width:$screen-sm){
+			left: 0;
+			top: -710px;
+			height: 680px;
+			max-height: 100vh;
+		}
+		
+		
+		&.is-active {
+			left: 0;
+			@media screen and (min-width:$screen-sm){
+				top: 0;
+			}
+		}
+		.container {
+			display: flex;
+			align-items: center;
+			height: 100%;
+		}
+	}
+	.menu__link {
+		color: #666666;
+		font-family: "shearman", helvetica, sans-serif;
+		font-size: 40px;
+		font-weight: bold;
+		margin-bottom: 11px;
+		text-decoration: none;
+		display: inline-block;
+		transition: all 0.5 ease;
+		line-height: 1;
+		@media screen and (min-width:$screen-sm){
+			font-size: 57.6px;
+			margin-bottom: 20px;
+		}
+		&:hover, &:focus {
+			text-decoration: underline;
+			color: #50e3c2;
+			@media screen and (min-width:$screen-sm){
+				font-size: 67.2px;
+			}
+		}
+	}
+	.menu__contact {
+		position: absolute;
+		left: 20px;
+		right: 20px;
+		bottom: 40px;
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+	}
+	.menu__contact-link {
+		color: white;
+		text-decoration: none;
+		font-family: 'Helvetica';
+		font-size: 18px;
+		line-height: 1.22;
+	}
+	.menu__contact-icon {
+		width: 25px;
+		display: inline-block;
+		img {
+			width: 100%;
+		}
+		&.instagram {
+			margin-right: 20px;
+		}
+	}
+
+}
