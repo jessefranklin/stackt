@@ -21,10 +21,10 @@ $(document).ready(function(){
       $('body,html').css({'overflow-y':'auto'});
     },1000);
 
-    var logoM = 100;
+    var logoM = 80;
 
     if(Modernizr.mq('(max-width: 990px)')){
-      logoM = 40;
+      logoM = 100;
     }
 
     var $header = $('body').find('.stackt-discover'),
@@ -62,13 +62,6 @@ $(document).ready(function(){
     }, 250);
     
   });
-
-  // Menu toggle
-  var $hamburger = $(".hamburger");
-  $hamburger.on("click", function(e) {
-    $hamburger.toggleClass("is-active");
-    $('.menu').toggleClass('is-active');
-   });
   
 });
 

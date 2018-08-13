@@ -10,7 +10,7 @@
         height: 100%;
         width: 100%;
     .block {
-        height: 650px;
+        height: 600px;
         h2{
             font-family: $sans;
             @include breakpoint(small) {
@@ -56,7 +56,8 @@
             .content-container {
                 padding-bottom: 60px; 
                 position: absolute;
-                left: 15px;
+                // left: 15px;
+                right: 0;
                 bottom: 0;
                 padding-left: 0;
                 margin-left: 0;
@@ -107,15 +108,12 @@
         }
         input[type="checkbox"]{
             border: 1px solid #fff;
+            cursor: pointer;
+
         }
         label {
             &:before {
                     border: 2px solid #fff;
-            }
-            &:after {
-                    border: 3px solid #fff;
-                    background: #fff;
-                    transform: rotate(-45deg);
             }
         }
     }
@@ -127,7 +125,7 @@
         background: transparent;
         .block {
             height: auto;
-            min-height: 550px;
+            min-height: 500px;
              &.discover-block {
                 background: $grey;
                 .content-container {
@@ -142,9 +140,10 @@
                     display: flex;
                     flex-direction: column; 
                     float: none;
-                    padding-left: 0px;
+                    padding-left: 7px;
                     margin-left: auto;
                     left: 9%;
+                    right: auto;
                 }
             }
         }
