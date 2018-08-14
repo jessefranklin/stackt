@@ -1,8 +1,4 @@
-.stackt-vendors {
-    h3 {
-        color: rgba($vendor,1);
-    }
-}
+
 
 .vendor-container {
     font-family: $sans;
@@ -18,9 +14,15 @@
     a {
         display: inline-block;
         transition: color .4s ease-in-out;
-        color: rgba($vendor,1);
+        color: rgba(#000,.9);
+        &.color-green {
+            color: rgba($teal,.9);
+            &:hover {
+                 color: rgba($teal,.5);
+            }
+        }
         &:hover {
-             color: rgba($vendor,.5);
+             color: rgba(#000,.5);
             text-decoration: none;
         }
     }
@@ -29,7 +31,6 @@
     display: block;
     overflow: hidden;
     a {
-        color: rgba($vendor,1);
         display: inline-block;
     }
 }
