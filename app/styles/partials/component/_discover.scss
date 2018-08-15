@@ -10,7 +10,7 @@
         height: 100%;
         width: 100%;
     .block {
-        height: 600px;
+        height: 520px;
         h2{
             font-family: $sans;
             @include breakpoint(small) {

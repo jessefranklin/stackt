@@ -39,7 +39,8 @@
   width: 100%;
   margin: 0 auto;
   display: block;
-  position: absolute;
+  position: fixed;
+  top: 0;
   z-index: 4;
   left: 50%;
   transform: translate(-50%,0);
@@ -49,9 +50,11 @@
   }
   a {  
     width: 100px;
-    display: block;
     position: relative;
+    display: inline-block;
     margin-top: 40px;
+    left: 0;
+
     @include breakpoint(small){
       width: 70px; 
     }
@@ -64,18 +67,25 @@
 
 .brand-logo,
 .brand-logo-black {
-  &.sticky {
-    &.show {
-      a {
-      }
-    }
+  margin-left: -12px;
+}
+
+.brand-logo-black {
+  &.show {
+    position: absolute;
+    margin-left: 0;
   }
 } 
 
 .mask-logo-blk {
   position: relative;
   z-index: 4;
-  overflow: hidden;
+  width: 100%;
+  .mask-fixed {
+    position: relative;
+    width: 100%;
+    clip: rect(0, auto, auto, 0);
+  }
 }
 
 .stackt-logo {

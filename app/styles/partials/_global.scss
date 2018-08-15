@@ -1,9 +1,7 @@
 * {
 	box-sizing: border-box;
 }
-html {
-	overflow: hidden;
-}
+
 
 body {
 	margin: 0;
@@ -11,7 +9,6 @@ body {
 	line-height: 1.875;
 	font-family: $body;
 	outline: none;
-	overflow: hidden;
 }
 
 a {

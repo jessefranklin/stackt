@@ -24,6 +24,9 @@
         h2 {
             font-size: 60px;
             margin-bottom: 40px;
+            @include breakpoint(small) {
+                font-size: 45px;
+            }
         }
         p {
             font-family: $body;
