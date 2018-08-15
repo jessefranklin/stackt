@@ -67,13 +67,11 @@
 
 .brand-logo,
 .brand-logo-black {
-  margin-left: -12px;
 }
 
 .brand-logo-black {
   &.show {
     position: absolute;
-    margin-left: 0;
   }
 } 
 
