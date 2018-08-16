@@ -12,6 +12,7 @@
         counter-reset: dots;
         position: absolute;
         top: 50%;
+        pointer-events:none; 
         transform:translateY(-50%);
         transition: opacity .4s ease-in-out;
         opacity: 1;
@@ -31,6 +32,7 @@
         color: #fff;
         font-weight: 400;
         font-size: 24px;
+        pointer-events:auto;
         text-align: left;
         &:before {
             counter-increment:dots;

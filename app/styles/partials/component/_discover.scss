@@ -66,6 +66,9 @@
                     right: 0;
                     padding-left: 15px;
                 }
+                @include breakpoint(xlarge) {
+                    right: auto;
+                }
             }
             
         }

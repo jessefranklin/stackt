@@ -65,24 +65,28 @@
 
 }
 
-.brand-logo,
-.brand-logo-black {
-}
-
 .brand-logo-black {
   &.show {
     position: absolute;
   }
 } 
 
+.above-white {
+  position: relative;
+  z-index: 4;
+}
+
 .mask-logo-blk {
   position: relative;
   z-index: 4;
   width: 100%;
+  margin: 0 auto;
+  max-width: $contentmaxwidth;
   .mask-fixed {
     position: relative;
     width: 100%;
     clip: rect(0, auto, auto, 0);
+      
   }
 }
 
