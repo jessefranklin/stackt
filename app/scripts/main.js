@@ -16,6 +16,7 @@ $(document).ready(function(){
 
     setTimeout(function(){
       blackmask();
+      $('.brand-logo-black').css({'opacity':1})
     },250);
 
   
@@ -54,9 +55,11 @@ $(document).ready(function(){
 
 function blackmask(){
   var doc = document.documentElement;
+
   $('.mask-logo-blk').each(function(i, obj) {
       var x = $(this).height();
       $(this).height(x);
       $(this).find('.mask-fixed').css({'height':x,'position':'absolute'});
+
   });
 }
